@@ -6,12 +6,12 @@ As of writing this readme the following chapters are in reasonable shape:
 
 1. Random Walk and Weiner Process
 2. Brownian Motion
+3. Brownian Motion of Harmonic Oscillator
 
 
 Things to do in the near future include
 
-1. Brownian motion in harmonic oscillator
-2. Black-Scholes model of stock movement
-3. Option pricing using the model
-4. Interest rate models
+1. Black-Scholes model of stock movement
+2. Option pricing using the model
+3. Interest rate models
 
