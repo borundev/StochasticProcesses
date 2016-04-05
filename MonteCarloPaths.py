@@ -22,6 +22,23 @@ class Paths(object):
     def get_step(self,k):
         return self.paths[:,k]
     
+class BinaryPaths(Paths):
+    
+    # The BinaryPath takes the total time and the time after which the increment is to be made
+    def __init__(self,T,dt,npaths,p=.5):
+        super(BinaryPaths,self).__init__(T,npaths)
+        self.p=p
+        
+        self.dt=dt
+        self.nsteps=int(self.T/self.dt)
+        Paths.__setup__(self)
+        
+        self.randoms=2*(np.random.binomial(1,self.p,self.npaths*(self.nsteps-1))-.5)
+        self.randoms.shape=[self.npaths,self.nsteps-1]
+        
+        for i in range(self.nsteps-1):
+            self.paths[:,i+1]=self.paths[:,i]+self.randoms[:,i]
+    
 class WeinerPaths(Paths):
     
     
