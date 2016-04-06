@@ -2,7 +2,8 @@
 
 This folder contains various chapters explaining topics in stochastic calculus both analytically and computationally using Monte Carlo techniques. The emphasis is on developing a physical understanding using concepts and examples from physics and finance.
 
-As of writing this readme the **following chapters are in reasonable shape**:
+## Complete Chapters
+**following chapters are in reasonable shape**:
 
 ### 1 [Random Walk and Weiner Process](RandomWalkAndWeinerProcess.ipynb)
 
@@ -20,12 +21,14 @@ This chapter discusses Brownian motion in a quadratic potential by adding the sa
 
 In this chapter we introduce geometric Brownian motion that leads to log-normal distribution instead of normal distribution. This is the model for stock price fluctuations adopted by Black, Scholes and Metron. We then show how simple vanilla options can be priced in this model using risk neutral pricing using both analytical and Monte Carlo methods. As something not usually seen in quant finance books we also numerically solve the fluctuation in the option price itself demonstrating its correlation with the stock price.
 
+## Incomplete Chapters
+
 The **following are incomplete**:
 
 ### 5 [Barrier Crossing](BarrierCrossing.ipynb)
 
 
-Things to do in the near future include:
+## Things to do in the near future include:
 
 1. American Options and other exotic options
 2. Interest rate models
