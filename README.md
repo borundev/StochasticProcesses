@@ -4,7 +4,7 @@ This folder contains various chapters explaining topics in stochastic calculus b
 
 As of writing this readme the following chapters are in reasonable shape:
 
-1. Random Walk and Weiner Process
+1. Random Walk and Weiner Process [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 2. Brownian Motion
 3. Brownian Motion of Harmonic Oscillator
 
