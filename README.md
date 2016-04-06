@@ -5,13 +5,13 @@ This folder contains various chapters explaining topics in stochastic calculus b
 As of writing this readme the following chapters are in reasonable shape:
 
 1. [Random Walk and Weiner Process](RandomWalkAndWeinerProcess.ipynb)
-2. [Brownian Motion](https://github.com/borundev/StochasticProcesses/blob/master/BrownianMotion.ipynb)
-3. [Brownian Motion of Harmonic Oscillator](https://github.com/borundev/StochasticProcesses/blob/master/StochasticHarmonicOscillator.ipynb)
-4. [Geometric Brownian Motion and Black-Scholes-Merton model for option pricing](https://github.com/borundev/StochasticProcesses/blob/master/GeometricBrownianMotion_and_EuropeanOptions.ipynb)
+2. [Brownian Motion](BrownianMotion.ipynb)
+3. [Brownian Motion of Harmonic Oscillator](StochasticHarmonicOscillator.ipynb)
+4. [Geometric Brownian Motion and Black-Scholes-Merton model for option pricing](GeometricBrownianMotion_and_EuropeanOptions.ipynb)
 
 The following are incomplete:
 
-1. [Barrier Crossing](https://github.com/borundev/StochasticProcesses/blob/master/BarrierCrossing.ipynb)
+1. [Barrier Crossing](BarrierCrossing.ipynb)
 
 
 Things to do in the near future include:
