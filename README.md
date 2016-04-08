@@ -27,6 +27,10 @@ The **following are incomplete**:
 
 ### 5 [Barrier Crossing](BarrierCrossing.ipynb)
 
+In this chapter we discuss how to evaluate probabilities of random paths crossing barriers. We introduce the analytic way using method of reflection as well as Monte Carlo methods.
+
+In addition we also introduce the method to construct paths when the end points are fixed. This is useful in Monte Carlo simlulations when the final point can only be in a small region and use of methods introduced earlier would lead to most paths having to be discarded.
+
 
 ## Things to do in the near future include:
 
