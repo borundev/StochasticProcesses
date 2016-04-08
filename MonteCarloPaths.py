@@ -1,5 +1,9 @@
 import numpy as np
 
+def mask_data(data,*args):
+    mask_and=np.array(args).all(0)
+    return data[mask_and]
+
 class Paths(object):
     
     def __init__(self,T,npaths):
@@ -42,7 +46,7 @@ class BinaryPaths(Paths):
 class WeinerPaths(Paths):
     
     
-    def __init__(self,T,nsteps,npaths,randoms=0,mu=0,sigma=1,seed=False):
+    def __init__(self,T,nsteps,npaths,mu=0,sigma=1,seed=False):
         super(WeinerPaths,self).__init__(T,npaths)
         
         self.nsteps=nsteps
@@ -90,4 +94,37 @@ class GeometricWeinerPaths(Paths):
 
         for i in range(nsteps-1):
             self.paths[:,i+1]=self.paths[:,i]*(1+self.mu*self.dt+self.sigma*self.dW*self.randoms[:,i])
- 
+
+class LevyWeinerPaths(Paths):
+    def __init__(self,xi,xf,T,nsteps,npaths,mu=0,sigma=1,seed=False):
+        super(LevyWeinerPaths,self).__init__(T,npaths)
+        
+        self.nsteps=nsteps
+        self.dt=1.0*self.T/self.nsteps
+        Paths.__setup__(self)
+        
+        self.mu=mu
+        self.sigma=sigma
+        
+        self.dW=np.sqrt(self.dt)
+
+        
+        self.paths[:,0]=xi
+        self.paths[:,-1]=xf
+    
+        if type(seed) != bool:
+            np.random.seed(seed)
+        self.randoms=np.random.normal(0,1,npaths*(nsteps-1))
+        self.randoms.shape=[npaths,nsteps-1]
+
+        
+
+        for k in range(1,self.nsteps-1):
+            delta_t=1   # because we are always realizing the step right after the previous one in this method
+            delta_tp=(self.nsteps-k) # the number of steps remaining to the end
+            mu=(delta_tp*self.paths[:,k-1]+delta_t*self.paths[:,-1])/(delta_t+delta_tp)
+            Sigma=sigma*(delta_t**(-1) + delta_tp**(-1))**(-1/2.0)
+            self.paths[:,k]=mu+ Sigma*self.dW*self.randoms[:,k]
+    
+    
+
