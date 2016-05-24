@@ -11,7 +11,7 @@ This chapter starts with describing and simulating the binomial random walk. The
 
 ### 2 [Stochastic Calculus](StochasticCalculus.ipynb)
 
-Building on the previous chapters developement of Weiner process, this chapter discusses how to integrate with respect to the Weiner process, otherwise known as stochastic integration. After discussing how to define the integral as a summation and differences from Riemann integral, we discuss the differences between Ito's prescription and Stratonovich's prescription and end with Ito's lemma.
+Building on the previous chapters developement of Weiner process, this chapter discusses how to integrate with respect to the Weiner process, otherwise known as stochastic integration. After discussing how to define the integral as a summation and differences from Riemann integral, we discuss the differences between Ito's prescription and Stratonovich's prescription and end with Ito's lemma. We end by demonstrating how the [Milstein method](https://en.wikipedia.org/wiki/Milstein_method) for simulating stochastic processes works.
 
 ### 3 [Brownian Motion](BrownianMotion.ipynb)
 
